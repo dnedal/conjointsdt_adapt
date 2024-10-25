@@ -37,6 +37,9 @@ After implementing the experiment and collecting the result, researchers can use
   
 ## Version History
 
+Version 3.1 - October 25, 2024
+Dani Kaufmann Nedal added a functionality to export a .csv with the embedded fields for bulk importing into Qualtrics Survey Flow (see Bulk_Importing.txt)
+
 Version 3.0 - January 10, 2022
 
 Added a JavaScript randomizer to supplement the existing PHP randomizer. Users can now export JavaScript snippet that can be placed directly within a Qualtrics question to generate the conjoint tasks for a respondent. This no longer requires users to have a second server to host the PHP script and allows the randomization be carried out entirely within Qualtrics.
