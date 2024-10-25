@@ -1,4 +1,5 @@
-# Conjoint Survey Design Tool Version 3.0: A Python Graphical User Interface For Creating Conjoint Experimental Designs Usable With Web Survey Platforms
+# Conjoint Survey Design Tool Version 3.1: Adapted Version of A Python Graphical User Interface For Creating Conjoint Experimental Designs Usable With Web Survey Platforms
+# This version, by Dani Kaufmann Nedal (2024) adds a functionality to export a .csv with the embedded fields for bulk importing into Qualtrics Survey Flow (see Bulk_Importing.txt)
 # Copyright (c) 2022 Anton Strezhnev, Jens Hainmueller, Daniel J. Hopkins, and Teppei Yamamoto
 
 # This program is free software: you can redistribute it and/or modify
@@ -14,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# This software program was designed as a companion to 
+# The original software (V3.0) was designed as a companion to 
 # Hainmueller, Jens, Daniel J. Hopkins, and Teppei Yamamoto. 
 # "Causal inference in conjoint analysis: Understanding multidimensional choices via stated preference experiments." 
 # Political Analysis 22, no. 1 (2014): 1-30.
@@ -144,10 +145,11 @@ class conjointGUI:
         self.editmenu.add_command(label="Export to JavaScript", command=self.export_qualtrics_js)
         self.editmenu.add_command(label="Create Qualtrics Question Templates", command=self.export_question)
         self.editmenu.add_command(label="Export design to R", command=self.export_R)        
-        
+        self.editmenu.add_command(label="Export Embedded Fields", command=self.export_embedded_fields)
         self.aboutmenu = Menu(self.menu, tearoff=0)
         self.menu.add_cascade(label="About", menu=self.aboutmenu)
         self.aboutmenu.add_command(label="License", command=self.show_license)
+      
         
         # Initialize main frame - Two halves (left_frame/right_frame)
         self.left_frame = Frame(self.myParent)
@@ -238,7 +240,7 @@ class conjointGUI:
     def update_file_name(self, name):
         self.file_name = name
         self.myParent.title(self.file_name.split("/")[-1] + " -- "+"Conjoint Survey Design Tool (SDT)")
-    
+
     # Displays the GPL License Information
     def show_license(self):
         license_string = progname + "\n" + copyright + "\n\n" + GPL + "\n\n" + companion + "\n" + citation
@@ -293,7 +295,52 @@ class conjointGUI:
                    messagebox.showerror(title="Error",message="Error: Could not open file")
             else:
                 messagebox.showerror(title="Invalid File Name",message="Invalid file extension. File must have the .sdt extension")
+                
+    def export_embedded_fields(self):
+        # Prompt the user to select the CSV file save location
+        csv_filename = filedialog.asksaveasfilename(
+            defaultextension='.csv',
+            filetypes=[('CSV files', '*.csv'), ('All files', '.*')],
+            title="Save Embedded Fields CSV",
+            initialfile="embedded_fields.csv"
+        )
         
+        if csv_filename:
+            # Initialize list to hold embedded field names
+            embedded_fields = []
+            
+            # Retrieve number of tasks and profiles
+            K = int(self.task_num.get())
+            N = int(self.profile_num.get())
+            
+            # Number of attributes
+            num_attributes = len(self.attribute_list)
+            
+            # Generate Attribute Field Names: F-p-attr
+            for p in range(1, K + 1):  # Tasks
+                for attr in range(1, num_attributes + 1):  # Attributes
+                    field_name = f"F-{p}-{attr}"
+                    embedded_fields.append(field_name)
+            
+            # Generate Level Field Names: F-p-i-attr
+            for p in range(1, K + 1):  # Tasks
+                for i in range(1, N + 1):  # Profiles
+                    for attr in range(1, num_attributes + 1):  # Attributes
+                        field_name = f"F-{p}-{i}-{attr}"
+                        embedded_fields.append(field_name)
+            
+            # Write embedded fields to CSV file
+            with open(csv_filename, 'w', newline='', encoding='utf-8') as csvfile:
+                writer = csv.writer(csvfile)
+                writer.writerow(embedded_fields)
+                writer.writerow(['NA'] * len(embedded_fields))
+            
+            messagebox.showinfo(
+                "Export Successful",
+                f"Embedded fields have been exported to:\n{csv_filename}"
+            )
+            
+
     # Save survey data to python pickle instance
     def saveas_survey(self):
         out_file_name = filedialog.asksaveasfilename(**self.file_opt)
@@ -391,7 +438,8 @@ class conjointGUI:
                     messagebox.showerror(title="Error",message="Error: Could not open file")
             else:
                 messagebox.showerror(title="Invalid File Name",message="Invalid file extension. File must have the .csv extension")
-                
+
+
     # Quits the gui
     def exit_survey(self):
         response = messagebox.askyesnocancel(title="Quit",message="Would you like to save your current survey?")
@@ -1988,6 +2036,9 @@ for (var pr = 0; pr < returnarrayKeys.length; pr++){
     out_file.write(temp_3)
     
     out_file.close()
+
+
+
 
 # Output sample HTML template 
 def html_out(filename, num_attr, profiles, tasks):
