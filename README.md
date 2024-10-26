@@ -37,7 +37,7 @@ After implementing the experiment and collecting the result, researchers can use
   
 ## Version History
 Version 3.2 - October 26, 2024
-Dani Kaufmann Nedal added a functionality to export a csv with a codebook mapping attributes and levels to embedded field names. Click on Edit > Export Codebook.
+Dani Kaufmann Nedal added a functionality to export a csv with a codebook mapping attributes and levels to embedded field names. Click on Edit > Export Codebook. Added examples using the original immigration demo.
 
 Version 3.1 - October 25, 2024
 Dani Kaufmann Nedal added functionality to export a csv with the embedded fields for bulk importing into Qualtrics Survey Flow Edit > Export Embedded Fields (for instructions on importing into Qualtrics Survey Flow, see Bulk_Importing.txt)
