@@ -1,6 +1,8 @@
-# Conjoint Survey Design Tool Version 3.1: Adapted Version of A Python Graphical User Interface For Creating Conjoint Experimental Designs Usable With Web Survey Platforms
-# This version, by Dani Kaufmann Nedal (2024) adds a functionality to export a .csv with the embedded fields for bulk importing into Qualtrics Survey Flow (see Bulk_Importing.txt)
-# Copyright (c) 2022 Anton Strezhnev, Jens Hainmueller, Daniel J. Hopkins, and Teppei Yamamoto
+# Conjoint Survey Design Tool Version 3.2: A Python Graphical User Interface For Creating Conjoint Experimental Designs Usable With Web Survey Platforms
+# Version 3.2 - October 26, 2024, by Dani Kaufmann Nedal
+# Added functionalities to export a csv with the embedded fields for bulk importing into Qualtrics Survey Flow and to export a csv with a codebook.
+
+# Original Copyright (c) 2022 Anton Strezhnev, Jens Hainmueller, Daniel J. Hopkins, and Teppei Yamamoto
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -15,7 +17,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# The original software (V3.0) was designed as a companion to 
+# This software program was originally designed as a companion to 
 # Hainmueller, Jens, Daniel J. Hopkins, and Teppei Yamamoto. 
 # "Causal inference in conjoint analysis: Understanding multidimensional choices via stated preference experiments." 
 # Political Analysis 22, no. 1 (2014): 1-30.
@@ -47,9 +49,9 @@ default_options["listbox_width"] = 30
 default_options["listbox_height"] = 30
 
 # License Environmental Variables
-version = "3.0"
+version = "3.2"
 progname = "Conjoint Survey Design Tool Version " + version + ": A Python Graphical User Interface For Creating Conjoint Experimental Designs Usable With Web Survey Platforms"
-copyright = "Copyright (c) 2022 Anton Strezhnev, Jens Hainmueller, Daniel J. Hopkins, and Teppei Yamamoto"
+copyright = "Version by Dani Kaufmann Nedal (2024). Original Copyright (c) 2022 Anton Strezhnev, Jens Hainmueller, Daniel J. Hopkins, and Teppei Yamamoto"
 GPL = "This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\n\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>."
 companion = "This software program was designed as a companion to"
 citation = 'Hainmueller, Jens, Daniel J. Hopkins, and Teppei Yamamoto. "Causal inference in conjoint analysis: Understanding multidimensional choices via stated preference experiments." Political Analysis 22, no. 1 (2014): 1-30.'
@@ -146,6 +148,7 @@ class conjointGUI:
         self.editmenu.add_command(label="Create Qualtrics Question Templates", command=self.export_question)
         self.editmenu.add_command(label="Export design to R", command=self.export_R)        
         self.editmenu.add_command(label="Export Embedded Fields", command=self.export_embedded_fields)
+        self.editmenu.add_command(label="Export Codebook",command=self.export_codebook)
         self.aboutmenu = Menu(self.menu, tearoff=0)
         self.menu.add_cascade(label="About", menu=self.aboutmenu)
         self.aboutmenu.add_command(label="License", command=self.show_license)
@@ -340,6 +343,72 @@ class conjointGUI:
                 f"Embedded fields have been exported to:\n{csv_filename}"
             )
             
+    def export_codebook(self):
+        # Prompt the user to select the CSV file save location
+        csv_filename = filedialog.asksaveasfilename(
+            defaultextension='.csv',
+            filetypes=[('CSV files', '*.csv'), ('All files', '.*')],
+            title="Save Codebook CSV",
+            initialfile="codebook.csv"
+        )
+
+        if csv_filename:
+            # Retrieve number of tasks and profiles
+            K = int(self.task_num.get())
+            N = int(self.profile_num.get())
+
+            # Number of attributes
+            num_attributes = len(self.attribute_list)
+
+            # Prepare list of rows for the codebook
+            codebook_rows = []
+
+            # For Attribute Fields: F-p-attr
+            for p in range(1, K + 1):  # Tasks
+                for attr_num in range(1, num_attributes + 1):  # Attributes
+                    field_name = f"F-{p}-{attr_num}"
+                    attribute_name = self.attribute_list[attr_num - 1]
+                    codebook_rows.append({
+                        'Field Name': field_name,
+                        'Field Type': 'Attribute',
+                        'Task Number': p,
+                        'Profile Number': '',
+                        'Attribute Number': attr_num,
+                        'Attribute Name': attribute_name,
+                        'Possible Levels': ''
+                    })
+
+            # For Level Fields: F-p-i-attr
+            for p in range(1, K + 1):  # Tasks
+                for i in range(1, N + 1):  # Profiles
+                    for attr_num in range(1, num_attributes + 1):  # Attributes
+                        field_name = f"F-{p}-{i}-{attr_num}"
+                        attribute_name = self.attribute_list[attr_num - 1]
+                        possible_levels = ', '.join(self.level_dict[attribute_name])
+                        codebook_rows.append({
+                            'Field Name': field_name,
+                            'Field Type': 'Level',
+                            'Task Number': p,
+                            'Profile Number': i,
+                            'Attribute Number': attr_num,
+                            'Attribute Name': attribute_name,
+                            'Possible Levels': possible_levels
+                        })
+
+            # Write the codebook to a CSV file
+            with open(csv_filename, 'w', newline='', encoding='utf-8') as csvfile:
+                fieldnames = ['Field Name', 'Field Type', 'Task Number', 'Profile Number', 'Attribute Number', 'Attribute Name', 'Possible Levels']
+                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+
+                writer.writeheader()
+                for row in codebook_rows:
+                    writer.writerow(row)
+
+            messagebox.showinfo(
+                "Export Successful",
+                f"Codebook has been exported to:\n{csv_filename}"
+            )
+
 
     # Save survey data to python pickle instance
     def saveas_survey(self):
