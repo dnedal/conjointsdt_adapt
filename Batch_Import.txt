@@ -1,0 +1,13 @@
+## Exporting Embedded Fields for Batch Importing in Qualtrics
+# Exporting
+This 3.1 version includes a functionality to export a csv file with all attributes and levels in the survey. To export, click on "Edit > Export Embedded Fields"
+The csv will contain two rows. The top row includes one cell for each embedded field, and the second row is NA (otherwise qualtrics recognizes the file as empty).
+
+# Importing into Qualtrics Survey Flow
+Currently, the only method to batch import embedded fields to the Survey Flow is to use the "Add from Contacts", function. There are 4 steps.
+1) Go to your Qualtrics directory and create a new list, name it anything you want (e.g. "embedded"). You will be prompted to add a file. Upload your csv with the embedded fields here. Make sure that the delimiter is set to "comma", and click "next".
+2) Inspect the fields to be imported and make sure that they are all set to "Import as field	> Embedded Data".
+3) Return to your Survey Flow, and click on "Add from Contacts > My Library > embedded".
+4) Check the "select all tags" (or manually select the ones you want to import) and click OK. Voilà!
+
+Questions can be directed at dani.nedal@utoronto.ca
