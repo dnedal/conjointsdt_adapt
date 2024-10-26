@@ -36,9 +36,11 @@ Please consult the `conjoint_sdt_manual.pdf` file located in the Manual folder f
 After implementing the experiment and collecting the result, researchers can use the `cjoint` R package for analysis and visualization of the results. This package can be installed directly from CRAN. The most current documentation can be found at `https://cran.r-project.org/web/packages/cjoint/index.html`.
   
 ## Version History
+Version 3.2 - October 26, 2024
+Dani Kaufmann Nedal added a functionality to export a csv with a codebook mapping attributes and levels to embedded field names.
 
 Version 3.1 - October 25, 2024
-Dani Kaufmann Nedal added a functionality to export a .csv with the embedded fields for bulk importing into Qualtrics Survey Flow (see Bulk_Importing.txt)
+Dani Kaufmann Nedal added functionality to export a csv with the embedded fields for bulk importing into Qualtrics Survey Flow (see Bulk_Importing.txt)
 
 Version 3.0 - January 10, 2022
 
