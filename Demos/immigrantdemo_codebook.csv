@@ -1,0 +1,136 @@
+Field Name,Field Type,Task Number,Profile Number,Attribute Number,Attribute Name,Possible Levels
+F-1-1,Attribute,1,,1,Gender,
+F-1-2,Attribute,1,,2,Education,
+F-1-3,Attribute,1,,3,Language Skills,
+F-1-4,Attribute,1,,4,Country of Origin,
+F-1-5,Attribute,1,,5,Job,
+F-1-6,Attribute,1,,6,Job Experience,
+F-1-7,Attribute,1,,7,Job Plans,
+F-1-8,Attribute,1,,8,Reason for Application,
+F-1-9,Attribute,1,,9,Prior Entry,
+F-2-1,Attribute,2,,1,Gender,
+F-2-2,Attribute,2,,2,Education,
+F-2-3,Attribute,2,,3,Language Skills,
+F-2-4,Attribute,2,,4,Country of Origin,
+F-2-5,Attribute,2,,5,Job,
+F-2-6,Attribute,2,,6,Job Experience,
+F-2-7,Attribute,2,,7,Job Plans,
+F-2-8,Attribute,2,,8,Reason for Application,
+F-2-9,Attribute,2,,9,Prior Entry,
+F-3-1,Attribute,3,,1,Gender,
+F-3-2,Attribute,3,,2,Education,
+F-3-3,Attribute,3,,3,Language Skills,
+F-3-4,Attribute,3,,4,Country of Origin,
+F-3-5,Attribute,3,,5,Job,
+F-3-6,Attribute,3,,6,Job Experience,
+F-3-7,Attribute,3,,7,Job Plans,
+F-3-8,Attribute,3,,8,Reason for Application,
+F-3-9,Attribute,3,,9,Prior Entry,
+F-4-1,Attribute,4,,1,Gender,
+F-4-2,Attribute,4,,2,Education,
+F-4-3,Attribute,4,,3,Language Skills,
+F-4-4,Attribute,4,,4,Country of Origin,
+F-4-5,Attribute,4,,5,Job,
+F-4-6,Attribute,4,,6,Job Experience,
+F-4-7,Attribute,4,,7,Job Plans,
+F-4-8,Attribute,4,,8,Reason for Application,
+F-4-9,Attribute,4,,9,Prior Entry,
+F-5-1,Attribute,5,,1,Gender,
+F-5-2,Attribute,5,,2,Education,
+F-5-3,Attribute,5,,3,Language Skills,
+F-5-4,Attribute,5,,4,Country of Origin,
+F-5-5,Attribute,5,,5,Job,
+F-5-6,Attribute,5,,6,Job Experience,
+F-5-7,Attribute,5,,7,Job Plans,
+F-5-8,Attribute,5,,8,Reason for Application,
+F-5-9,Attribute,5,,9,Prior Entry,
+F-1-1-1,Level,1,1,1,Gender,"female, male"
+F-1-1-2,Level,1,1,2,Education,"no formal, 4th grade, 8th grade, high school, two-year college, college degree, graduate degree"
+F-1-1-3,Level,1,1,3,Language Skills,"fluent English, broken English, tried English but unable, used interpreter"
+F-1-1-4,Level,1,1,4,Country of Origin,"Germany, France, Mexico, Philippines, Poland, India, China, Sudan, Somalia, Iraq"
+F-1-1-5,Level,1,1,5,Job,"janitor, waiter, child care provider, gardener, financial analyst, construction worker, teacher, computer programmer, nurse, research scientist, doctor"
+F-1-1-6,Level,1,1,6,Job Experience,"none, 1-2 years, 3-5 years, 5+ years"
+F-1-1-7,Level,1,1,7,Job Plans,"contract with employer, interviews with employer, will look for work, no plans to look for work"
+F-1-1-8,Level,1,1,8,Reason for Application,"reunite with family, seek better job, escape persecution"
+F-1-1-9,Level,1,1,9,Prior Entry,"never, once as tourist, many times as tourist, six months with family, once w/o authorization"
+F-1-2-1,Level,1,2,1,Gender,"female, male"
+F-1-2-2,Level,1,2,2,Education,"no formal, 4th grade, 8th grade, high school, two-year college, college degree, graduate degree"
+F-1-2-3,Level,1,2,3,Language Skills,"fluent English, broken English, tried English but unable, used interpreter"
+F-1-2-4,Level,1,2,4,Country of Origin,"Germany, France, Mexico, Philippines, Poland, India, China, Sudan, Somalia, Iraq"
+F-1-2-5,Level,1,2,5,Job,"janitor, waiter, child care provider, gardener, financial analyst, construction worker, teacher, computer programmer, nurse, research scientist, doctor"
+F-1-2-6,Level,1,2,6,Job Experience,"none, 1-2 years, 3-5 years, 5+ years"
+F-1-2-7,Level,1,2,7,Job Plans,"contract with employer, interviews with employer, will look for work, no plans to look for work"
+F-1-2-8,Level,1,2,8,Reason for Application,"reunite with family, seek better job, escape persecution"
+F-1-2-9,Level,1,2,9,Prior Entry,"never, once as tourist, many times as tourist, six months with family, once w/o authorization"
+F-2-1-1,Level,2,1,1,Gender,"female, male"
+F-2-1-2,Level,2,1,2,Education,"no formal, 4th grade, 8th grade, high school, two-year college, college degree, graduate degree"
+F-2-1-3,Level,2,1,3,Language Skills,"fluent English, broken English, tried English but unable, used interpreter"
+F-2-1-4,Level,2,1,4,Country of Origin,"Germany, France, Mexico, Philippines, Poland, India, China, Sudan, Somalia, Iraq"
+F-2-1-5,Level,2,1,5,Job,"janitor, waiter, child care provider, gardener, financial analyst, construction worker, teacher, computer programmer, nurse, research scientist, doctor"
+F-2-1-6,Level,2,1,6,Job Experience,"none, 1-2 years, 3-5 years, 5+ years"
+F-2-1-7,Level,2,1,7,Job Plans,"contract with employer, interviews with employer, will look for work, no plans to look for work"
+F-2-1-8,Level,2,1,8,Reason for Application,"reunite with family, seek better job, escape persecution"
+F-2-1-9,Level,2,1,9,Prior Entry,"never, once as tourist, many times as tourist, six months with family, once w/o authorization"
+F-2-2-1,Level,2,2,1,Gender,"female, male"
+F-2-2-2,Level,2,2,2,Education,"no formal, 4th grade, 8th grade, high school, two-year college, college degree, graduate degree"
+F-2-2-3,Level,2,2,3,Language Skills,"fluent English, broken English, tried English but unable, used interpreter"
+F-2-2-4,Level,2,2,4,Country of Origin,"Germany, France, Mexico, Philippines, Poland, India, China, Sudan, Somalia, Iraq"
+F-2-2-5,Level,2,2,5,Job,"janitor, waiter, child care provider, gardener, financial analyst, construction worker, teacher, computer programmer, nurse, research scientist, doctor"
+F-2-2-6,Level,2,2,6,Job Experience,"none, 1-2 years, 3-5 years, 5+ years"
+F-2-2-7,Level,2,2,7,Job Plans,"contract with employer, interviews with employer, will look for work, no plans to look for work"
+F-2-2-8,Level,2,2,8,Reason for Application,"reunite with family, seek better job, escape persecution"
+F-2-2-9,Level,2,2,9,Prior Entry,"never, once as tourist, many times as tourist, six months with family, once w/o authorization"
+F-3-1-1,Level,3,1,1,Gender,"female, male"
+F-3-1-2,Level,3,1,2,Education,"no formal, 4th grade, 8th grade, high school, two-year college, college degree, graduate degree"
+F-3-1-3,Level,3,1,3,Language Skills,"fluent English, broken English, tried English but unable, used interpreter"
+F-3-1-4,Level,3,1,4,Country of Origin,"Germany, France, Mexico, Philippines, Poland, India, China, Sudan, Somalia, Iraq"
+F-3-1-5,Level,3,1,5,Job,"janitor, waiter, child care provider, gardener, financial analyst, construction worker, teacher, computer programmer, nurse, research scientist, doctor"
+F-3-1-6,Level,3,1,6,Job Experience,"none, 1-2 years, 3-5 years, 5+ years"
+F-3-1-7,Level,3,1,7,Job Plans,"contract with employer, interviews with employer, will look for work, no plans to look for work"
+F-3-1-8,Level,3,1,8,Reason for Application,"reunite with family, seek better job, escape persecution"
+F-3-1-9,Level,3,1,9,Prior Entry,"never, once as tourist, many times as tourist, six months with family, once w/o authorization"
+F-3-2-1,Level,3,2,1,Gender,"female, male"
+F-3-2-2,Level,3,2,2,Education,"no formal, 4th grade, 8th grade, high school, two-year college, college degree, graduate degree"
+F-3-2-3,Level,3,2,3,Language Skills,"fluent English, broken English, tried English but unable, used interpreter"
+F-3-2-4,Level,3,2,4,Country of Origin,"Germany, France, Mexico, Philippines, Poland, India, China, Sudan, Somalia, Iraq"
+F-3-2-5,Level,3,2,5,Job,"janitor, waiter, child care provider, gardener, financial analyst, construction worker, teacher, computer programmer, nurse, research scientist, doctor"
+F-3-2-6,Level,3,2,6,Job Experience,"none, 1-2 years, 3-5 years, 5+ years"
+F-3-2-7,Level,3,2,7,Job Plans,"contract with employer, interviews with employer, will look for work, no plans to look for work"
+F-3-2-8,Level,3,2,8,Reason for Application,"reunite with family, seek better job, escape persecution"
+F-3-2-9,Level,3,2,9,Prior Entry,"never, once as tourist, many times as tourist, six months with family, once w/o authorization"
+F-4-1-1,Level,4,1,1,Gender,"female, male"
+F-4-1-2,Level,4,1,2,Education,"no formal, 4th grade, 8th grade, high school, two-year college, college degree, graduate degree"
+F-4-1-3,Level,4,1,3,Language Skills,"fluent English, broken English, tried English but unable, used interpreter"
+F-4-1-4,Level,4,1,4,Country of Origin,"Germany, France, Mexico, Philippines, Poland, India, China, Sudan, Somalia, Iraq"
+F-4-1-5,Level,4,1,5,Job,"janitor, waiter, child care provider, gardener, financial analyst, construction worker, teacher, computer programmer, nurse, research scientist, doctor"
+F-4-1-6,Level,4,1,6,Job Experience,"none, 1-2 years, 3-5 years, 5+ years"
+F-4-1-7,Level,4,1,7,Job Plans,"contract with employer, interviews with employer, will look for work, no plans to look for work"
+F-4-1-8,Level,4,1,8,Reason for Application,"reunite with family, seek better job, escape persecution"
+F-4-1-9,Level,4,1,9,Prior Entry,"never, once as tourist, many times as tourist, six months with family, once w/o authorization"
+F-4-2-1,Level,4,2,1,Gender,"female, male"
+F-4-2-2,Level,4,2,2,Education,"no formal, 4th grade, 8th grade, high school, two-year college, college degree, graduate degree"
+F-4-2-3,Level,4,2,3,Language Skills,"fluent English, broken English, tried English but unable, used interpreter"
+F-4-2-4,Level,4,2,4,Country of Origin,"Germany, France, Mexico, Philippines, Poland, India, China, Sudan, Somalia, Iraq"
+F-4-2-5,Level,4,2,5,Job,"janitor, waiter, child care provider, gardener, financial analyst, construction worker, teacher, computer programmer, nurse, research scientist, doctor"
+F-4-2-6,Level,4,2,6,Job Experience,"none, 1-2 years, 3-5 years, 5+ years"
+F-4-2-7,Level,4,2,7,Job Plans,"contract with employer, interviews with employer, will look for work, no plans to look for work"
+F-4-2-8,Level,4,2,8,Reason for Application,"reunite with family, seek better job, escape persecution"
+F-4-2-9,Level,4,2,9,Prior Entry,"never, once as tourist, many times as tourist, six months with family, once w/o authorization"
+F-5-1-1,Level,5,1,1,Gender,"female, male"
+F-5-1-2,Level,5,1,2,Education,"no formal, 4th grade, 8th grade, high school, two-year college, college degree, graduate degree"
+F-5-1-3,Level,5,1,3,Language Skills,"fluent English, broken English, tried English but unable, used interpreter"
+F-5-1-4,Level,5,1,4,Country of Origin,"Germany, France, Mexico, Philippines, Poland, India, China, Sudan, Somalia, Iraq"
+F-5-1-5,Level,5,1,5,Job,"janitor, waiter, child care provider, gardener, financial analyst, construction worker, teacher, computer programmer, nurse, research scientist, doctor"
+F-5-1-6,Level,5,1,6,Job Experience,"none, 1-2 years, 3-5 years, 5+ years"
+F-5-1-7,Level,5,1,7,Job Plans,"contract with employer, interviews with employer, will look for work, no plans to look for work"
+F-5-1-8,Level,5,1,8,Reason for Application,"reunite with family, seek better job, escape persecution"
+F-5-1-9,Level,5,1,9,Prior Entry,"never, once as tourist, many times as tourist, six months with family, once w/o authorization"
+F-5-2-1,Level,5,2,1,Gender,"female, male"
+F-5-2-2,Level,5,2,2,Education,"no formal, 4th grade, 8th grade, high school, two-year college, college degree, graduate degree"
+F-5-2-3,Level,5,2,3,Language Skills,"fluent English, broken English, tried English but unable, used interpreter"
+F-5-2-4,Level,5,2,4,Country of Origin,"Germany, France, Mexico, Philippines, Poland, India, China, Sudan, Somalia, Iraq"
+F-5-2-5,Level,5,2,5,Job,"janitor, waiter, child care provider, gardener, financial analyst, construction worker, teacher, computer programmer, nurse, research scientist, doctor"
+F-5-2-6,Level,5,2,6,Job Experience,"none, 1-2 years, 3-5 years, 5+ years"
+F-5-2-7,Level,5,2,7,Job Plans,"contract with employer, interviews with employer, will look for work, no plans to look for work"
+F-5-2-8,Level,5,2,8,Reason for Application,"reunite with family, seek better job, escape persecution"
+F-5-2-9,Level,5,2,9,Prior Entry,"never, once as tourist, many times as tourist, six months with family, once w/o authorization"
